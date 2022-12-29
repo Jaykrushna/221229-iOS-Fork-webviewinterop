@@ -48,9 +48,10 @@ class ViewController: UIViewController {
         
         
         // 4
-        if let url = URL(string: "https://mtwtestsite.azurewebsites.net/webviewinterop.html") {
+        if let url = Bundle.main.url(forResource: "index", withExtension: "html") {
             webView.load(URLRequest(url: url))
         }
+        
     }
     
     @IBAction func colorChoiceChanged(_ sender: UISegmentedControl) {
